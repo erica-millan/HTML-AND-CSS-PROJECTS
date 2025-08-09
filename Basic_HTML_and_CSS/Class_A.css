@@ -1,0 +1,12 @@
+/*anything within the <body> element will be written in italics and centered on the page.
+  Created class name (Class_A). any element connected to that class name will have blue text.
+*/
+
+body {
+	font-style: italic;
+	text-align: center;
+}
+
+.Class_A {
+	color: blue;
+}

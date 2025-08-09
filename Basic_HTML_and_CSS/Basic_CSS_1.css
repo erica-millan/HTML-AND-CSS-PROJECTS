@@ -1,0 +1,6 @@
+	/*css rule set that assigns the properties color and text-allign to corresponding values.*/
+	
+	p {
+	color: red;
+	text-align: right;
+	}

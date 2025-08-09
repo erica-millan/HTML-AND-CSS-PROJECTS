@@ -1,0 +1,16 @@
+p {
+	color: purple;
+	background: black;
+	font-size: large;
+	font-weight: bold;
+	text-align: center;
+}
+
+.shadow-box {
+      width: 800px;
+      height: 20px;
+      background-color: black;
+      box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.3);
+      padding: 20px;
+      margin: 70px;
+    }

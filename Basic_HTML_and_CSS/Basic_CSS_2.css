@@ -3,7 +3,7 @@ p {
 	background: black;
 	font-size: large;
 	font-weight: bold;
-	text-align: center;
+	/*text-align: center;*/
 }
 
 .shadow-box {

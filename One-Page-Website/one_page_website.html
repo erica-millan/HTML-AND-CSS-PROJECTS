@@ -2,14 +2,18 @@
 <html>
 
 <head>
+    <!--Title-->
     <title>Choose Your Hues</title>
+    <!--encoding-->
     <meta charset="UTF-8">
+    <!--connect to css-->
     <link href="css/one_page_website.css" rel="stylesheet">
 </head>
 
 <body>
     <!--NAVBAR-->
     <ul>
+        <!--anchor links to jump to different parts of the page-->
         <a href="#cool">
             <li>Cool Tones</li>
         </a>
@@ -44,29 +48,76 @@
         <div>
             <h2>Choose a Hue!</h2>
             <div>
+                <!--each hue has it's own section with an ID to naviate-->
                 <!--COOL IMAGE-->
                 <div id="cool">
                     <h3>Cool Hues</h3>
-                    <img src="Images/cool.png" alt="Cool Hues">
+                    <!--Clicking an image opens the modal and sets the slide-->
+                    <img src="Images/cool.png" alt="Cool Hues" class="demo" onclick="openModal();currentSlide(1)">
                 </div>
                 <!--WARM IMAGE-->
                 <div id="warm">
                     <h3>Warm Hues</h3>
-                    <img src="Images/warm.jpg" alt="Warm Hues">
+                    <!--Clicking an image opens the modal and sets the slide -->
+                    <img src="Images/warm.jpg" alt="Warm Hues" class="demo" onclick="openModal();currentSlide(2)">
                 </div>
                 <!--Shade-Grown IMAGE-->
                 <div id="shade-grown">
                     <h3>Shade-Grown Hues</h3>
-                    <img src="Images/Shade-Grown.jpg" alt="Shade-Grown Hues">
+                    <!--Clicking an image opens the modal and sets the slide -->
+                    <img src="Images/Shade-Grown.jpg" alt="Shade-Grown Hues" class="demo"
+                        onclick="openModal();currentSlide(3)">
                 </div>
                 <!--Neutral IMAGE-->
                 <div id="neutral">
                     <h3>Neutral Hues</h3>
-                    <img src="Images/neutral.jpg" alt="Neutral Hues">
+                    <!--Clicking an image opens the modal and sets the slide -->
+                    <img src="Images/neutral.jpg" alt="Neutral Hues" class="demo" onclick="openModal();currentSlide(4)">
                 </div>
             </div>
         </div>
     </section>
+
+    <!-- Lightbox Modal -->
+    <!--hidden by default but shows when an image is clicked. class .modal is hidden container,
+     invisible until triggered-->
+    <div id="myModal" class="modal">
+        <!--shows "x" in the top right corner. calls function .exitModal when clicked on-->
+        <span class="close cursor" onclick="exitModal()">&times;</span>
+        <!--mode-content, container for slides-->
+        <!--styled in css-->
+        <div class="modal-content">
+            <!--each div with "mySlides" class has an image-->
+            <!--full size image in the mySlides class for cool hue-->
+            <div class="mySlides">
+                <img src="Images/cool.png" style="width:100%">
+            </div>
+            <!--full size image in the mySlides class for warm hue-->
+            <div class="mySlides">
+                <img src="Images/warm.jpg" style="width:100%">
+            </div>
+            <!--full size image in the mySlides class for shade grown hue-->
+            <div class="mySlides">
+                <img src="Images/Shade-Grown.jpg" style="width:100%">
+            </div>
+            <!--full size image in the mySlides class for neutral hue-->
+            <div class="mySlides">
+                <img src="Images/neutral.jpg" style="width:100%">
+            </div>
+            <!--clicking on an arrow will trigger the slides to either move forward or backward. -->
+            <!--calls function "moveSlide" in the JS file-->
+            <!-- "&#10094;" is a < and "&#10095;" is a >" Thety are HTML entities for backwards and forwrds arrows.-->
+            <!--since it's an "a" it gets it's pink color from the "a" rule in css.-->
+            <!--when you click either it calls the function moveSlide and it passes through the argument of
+            either 1 or -1 depending on the button you click-->
+            <a class="prev" onclick="moveSlide(-1)">&#10094;</a>
+            <a class="next" onclick="moveSlide(1)">&#10095;</a>
+            <!--caption will get value of the alt text for hue in javascript logic in JS file-->
+            <div class="caption-container">
+                <p id="caption"></p>
+            </div>
+        </div>
+    </div>
     <!--VIDEOS-->
     <section>
         <!--COOL VIDEO-->
@@ -112,11 +163,13 @@
                     <p>Address, Fl 96584</p>
                 </td>
                 <td>
-                   <p>896-965-8472</p>
+                    <p>896-965-8472</p>
                 </td>
             </tr>
         </table>
     </footer>
+
 </body>
+<script src="js/one_page_website.js"></script>
 
 </html>

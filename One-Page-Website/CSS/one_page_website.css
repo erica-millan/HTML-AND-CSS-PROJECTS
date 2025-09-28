@@ -3,7 +3,7 @@
 /*Import link for the sacramento font from fonts.google.com*/
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Slab:ital,wght@0,100..700;1,100..700&family=Sacramento&display=swap');
 
-
+/*anchor tags*/
 a {
     font-family: "Josefin Slab", serif;
     font-size: 25px;
@@ -26,7 +26,10 @@ h1 {
     text-align: center;
 }
 
-h2, h3, h4, div{
+h2,
+h3,
+h4,
+div {
     font-family: 'Josefin Slab', serif;
     /*Font from fonts.google.com*/
     text-align: center;
@@ -112,4 +115,58 @@ input[type="submit"] {
     font-weight: bold;
     padding: 15px 25px;
     margin-top: 20px;
+}
+
+/*Lightbox targets html code using the .modal class.*/
+.modal {
+    display: none;
+    /* lightbox stays hidden until hue image is clicked on */
+    position: fixed;
+    z-index: 999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    /*dark semi transparent backdrop*/
+    background-color: rgba(0, 0, 0, 0.9);
+}
+
+/*Container with slide images and nav controls*/
+/*centered and styles to appear as a popup*/
+.modal-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 800px;
+    width: 90%;
+}
+
+/*will show every element witgh the class name "mySlides" displayed as none. 
+ so they will be hidding. only slide that will display is the slide that's clicked on.*/
+/*so by default all slides are hidden, and we show one at a time with javascript
+showSlides function*/
+ .mySlides {
+    display: none;
+}
+
+.active {
+    border: 2px solid #f1f1f1;
+}
+/* styling "x" button at top right*/
+.close {
+    position: absolute;
+    top: 20px;
+    right: 35px;
+    color: #fff;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+    z-index: 1000;
+}
+
+/*x turns accent color on hover*/
+.close:hover {
+    color: rgb(247, 177, 188);
+
 }
